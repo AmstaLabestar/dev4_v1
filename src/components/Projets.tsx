@@ -1,142 +1,33 @@
-// // import Experiences from "./components/Experiences"
-// // import Home from "./components/Home"
-// // import Navbar from "./components/Navbar"
-// // import Projets from "./components/Projets"
-
-
-// // const App = () => {
-// //   return (
-    
-// //       <div className="p-5 md:px-[15%]">
-// //         <Navbar/>
-// //         <Home/>
-// //       <Experiences />
-// //       <Projets />
-// //       </div>
-// //   )
-// // }
-
-// // export default App
-// // Projets.jsx
-// import { motion } from "framer-motion";
-// import { FaGithub } from "react-icons/fa";
-
-// const projects = [
-//   {
-//     title: "eNaissance",
-//     image: "/images/enaissance.png", // chemin vers ton image (public/images/enaissance.png)
-//     demo: "https://demo-enaissance.example.com",
-//     github: "https://github.com/toncompte/enaissance"
-//   },
-//   {
-//     title: "E-commerce",
-//     image: "/images/ecommerce.png",
-//     demo: "https://demo-ecommerce.example.com",
-//     github: "https://github.com/toncompte/ecommerce"
-//   },
-//   {
-//     title: "TodoList",
-//     image: "/images/todolist.png",
-//     demo: "https://demo-todolist.example.com",
-//     github: "https://github.com/toncompte/todolist"
-//   },
-// ];
-
-// const Projets = () => {
-//   return (
-//     <section className="py-20 bg-base-100" id="projets">
-//       <div className="max-w-6xl mx-auto px-4">
-//         <motion.h2
-//           className="text-4xl font-bold text-center mb-12"
-//           initial={{ opacity: 0, y: -40 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           viewport={{ once: true }}
-//         >
-//           Mes <span className="text-primary">Projets</span>
-//         </motion.h2>
-
-//         <div className="grid md:grid-cols-3 gap-8">
-//           {projects.map((project, i) => (
-//             <motion.div
-//               key={i}
-//               className="card shadow-xl border border-base-300 overflow-hidden"
-//               initial={{ opacity: 0, y: 50 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.6, delay: i * 0.1 }}
-//               viewport={{ once: true }}
-//             >
-//               <figure className="h-48 md:h-56 overflow-hidden">
-//                 <img
-//                   src={project.image}
-//                   alt={project.title}
-//                   className="w-full h-full object-cover hover:scale-110 transition duration-500"
-//                 />
-//               </figure>
-
-//               <div className="card-body bg-base-100">
-//                 <h4 className="card-title text-xl">{project.title}</h4>
-//                 <div className="flex justify-between mt-4">
-//                   <a
-//                     href={project.demo}
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                     className="btn btn-sm btn-primary text-white hover:scale-105 transition"
-//                   >
-//                     Demo
-//                   </a>
-//                   <a
-//                     href={project.github}
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                     className="btn btn-sm btn-ghost text-xl"
-//                   >
-//                     <FaGithub />
-//                   </a>
-//                 </div>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Projets;
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import enaissanceImg from "../assets/images/enaissance.png";
+import tookosImg from "../assets/images/tookos.png";
+import todoImg from "../assets/images/todo.png";
+
 
 const allProjects = [
   {
     title: "eNaissance",
-    image: "/src/assets/enaissance.png",
+    image: enaissanceImg,
     demo: "https://demo-enaissance.example.com",
     github: "https://github.com/AmstaLabestar/E-naissance.git",
-    category: "Web"
+    category: "Web",
   },
   {
     title: "E-commerce",
-    image: "/src/assets/tookos.png",
+    image: tookosImg,
     demo: "https://demo-ecommerce.example.com",
     github: "https://github.com/AmstaLabestar/tookos.git",
-    category: "Web"
+    category: "Web",
   },
   {
     title: "TodoList",
-    image: "/src/assets/todo.png",
+    image: todoImg,
     demo: "https://demo-todolist.example.com",
     github: "https://github.com/AmstaLabestar/todoWithComponents.git",
-    category: "Web"
+    category: "Web",
   },
-//   {
-//     title: "IA Churn Predictor",
-//     image: "/images/ia.png",
-//     demo: "https://demo-ia.example.com",
-//     github: "https://github.com/toncompte/ia-churn",
-//     category: "IA"
-//   },
 ];
 
 const categories = ["Tous", "Web", "Mobile", "IA"];
@@ -153,7 +44,7 @@ const Projets = () => {
     <section className="py-20 bg-base-100" id="projets">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold text-center mb-6"
+          className="text-4xl font-bold text-center mb-8"
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -163,7 +54,7 @@ const Projets = () => {
         </motion.h2>
 
         {/* Filtres */}
-        <div className="flex justify-center gap-4 mb-10 flex-wrap">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -177,12 +68,12 @@ const Projets = () => {
           ))}
         </div>
 
-        {/* Projets filtrés */}
+        {/* Liste des projets */}
         <div className="grid md:grid-cols-3 gap-8">
           {filteredProjects.map((project, i) => (
             <motion.div
               key={i}
-              className="card shadow-xl border border-base-300 overflow-hidden hover:shadow-2xl transition duration-300 hover:scale-[1.02]"
+              className="card shadow-xl border border-base-300 overflow-hidden hover:shadow-2xl transition duration-300 hover:scale-[1.03]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
@@ -193,6 +84,7 @@ const Projets = () => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover hover:scale-110 transition duration-500"
+                  loading="lazy"
                 />
               </figure>
 
@@ -203,7 +95,7 @@ const Projets = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-sm btn-primary text-white"
+                    className="btn btn-sm btn-primary text-white hover:scale-105 transition"
                   >
                     Demo
                   </a>
@@ -211,7 +103,7 @@ const Projets = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-sm btn-ghost text-xl"
+                    className="btn btn-sm btn-ghost text-xl hover:text-gray-600 transition"
                   >
                     <FaGithub />
                   </a>
