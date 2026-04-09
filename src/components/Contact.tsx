@@ -19,7 +19,7 @@ const contactLinks = [
 const Contact = () => {
   return (
     <section id="contact" className="py-16 md:py-24">
-      <div className="section-shell rounded-[2.25rem] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-6 md:p-10">
+      <div className="section-shell rounded-[2.25rem] border border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-6 md:p-10">
         <SectionHeading
           eyebrow="Contact"
           title="Disponible pour discuter d'un produit, d'une mission ou d'une refonte"
@@ -37,9 +37,9 @@ const Contact = () => {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-3 rounded-[1.5rem] border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold text-white transition hover:border-secondary hover:text-secondary"
+                className="flex items-center gap-3 rounded-[1.5rem] border border-white/12 bg-white/10 px-5 py-4 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(0,0,0,0.18)] transition hover:border-[#f7c58a] hover:bg-white/14 hover:text-white"
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-5 w-5 text-[#f7c58a]" />
                 {link.label}
               </a>
             );

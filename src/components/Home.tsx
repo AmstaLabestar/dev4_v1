@@ -22,7 +22,7 @@ const Home = () => {
           <h1 className="max-w-3xl text-4xl font-bold leading-tight text-slate-950 md:text-6xl">
             Je conçois des applications rapides, utiles et prêtes pour la production.
           </h1>
-          <p className="max-w-2xl text-base leading-8 text-slate-700 md:text-lg">
+          <p className="max-w-2xl text-base leading-8 text-slate-800 md:text-lg">
             J&apos;aide des clients et des equipes a transformer une idee en produit deploye:
             interface, backend, dockerisation, CI/CD, configuration Nginx, DNS et mise en
             ligne sur VPS.
@@ -59,7 +59,7 @@ const Home = () => {
           {stats.map((item) => (
             <div key={item.label} className="surface-panel rounded-[1.75rem] p-5">
               <p className="text-3xl font-bold text-slate-950">{item.value}</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{item.label}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-700">{item.label}</p>
             </div>
           ))}
         </div>

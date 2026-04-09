@@ -148,4 +148,12 @@
     width: 2.5rem;
     background: rgba(20, 122, 116, 0.4);
   }
+
+  .eyebrow-invert {
+    color: #f7c58a;
+  }
+
+  .eyebrow-invert::before {
+    background: rgba(247, 197, 138, 0.65);
+  }
 }
