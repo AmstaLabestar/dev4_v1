@@ -10,7 +10,10 @@ const links = [
 
 const MobileDock = () => {
   return (
-    <nav className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 rounded-full border border-white/60 bg-slate-950/92 px-2 py-2 text-white shadow-2xl shadow-slate-950/20 backdrop-blur lg:hidden">
+    <nav
+      className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 rounded-full border border-white/60 bg-slate-950/92 px-2 py-2 text-white shadow-2xl shadow-slate-950/20 backdrop-blur lg:hidden"
+      aria-label="Navigation mobile"
+    >
       <ul className="grid grid-cols-5 gap-1">
         {links.map((link) => {
           const Icon = link.icon;

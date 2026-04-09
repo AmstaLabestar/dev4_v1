@@ -80,6 +80,8 @@ const Home = () => {
             alt="Portrait de Hamza"
             className="h-[420px] w-full rounded-[1.5rem] object-cover"
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="absolute bottom-7 left-7 rounded-[1.5rem] bg-white/92 px-4 py-3 shadow-lg backdrop-blur">
             <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Focus</p>

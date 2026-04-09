@@ -37,6 +37,7 @@
     min-height: 100vh;
     color: hsl(var(--bc));
     font-family: "Manrope", sans-serif;
+    text-rendering: optimizeLegibility;
   }
 
   h1,
@@ -51,6 +52,31 @@
 
   ::selection {
     background: rgba(20, 122, 116, 0.18);
+  }
+
+  section[id] {
+    scroll-margin-top: 7rem;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid rgba(20, 122, 116, 0.48);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 

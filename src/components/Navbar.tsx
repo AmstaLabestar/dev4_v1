@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
         </a>
 
-        <nav className="ml-auto hidden items-center gap-2 lg:flex">
+        <nav className="ml-auto hidden items-center gap-2 lg:flex" aria-label="Navigation principale">
           {links.map((link) => (
             <a
               key={link.href}
