@@ -37,7 +37,7 @@ const Contact = () => {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-3 rounded-[1.5rem] border border-white/12 bg-white/10 px-5 py-4 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(0,0,0,0.18)] transition hover:border-[#f7c58a] hover:bg-white/14 hover:text-white"
+                className="flex items-center gap-3 rounded-[1.5rem] border border-white/12 bg-[rgba(255,255,255,0.14)] px-5 py-4 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(0,0,0,0.18)] transition hover:border-[#f7c58a] hover:bg-[rgba(255,255,255,0.18)] hover:text-white"
               >
                 <Icon className="h-5 w-5 text-[#f7c58a]" />
                 {link.label}

@@ -83,7 +83,7 @@ const Home = () => {
             decoding="async"
             fetchPriority="high"
           />
-          <div className="absolute bottom-7 left-7 rounded-[1.5rem] bg-white/92 px-4 py-3 shadow-lg backdrop-blur">
+          <div className="absolute bottom-7 left-7 rounded-[1.5rem] bg-white px-4 py-3 shadow-lg">
             <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Focus</p>
             <p className="mt-1 text-sm font-semibold text-slate-900">
               UI/UX mobile-first, delivery et deploiement

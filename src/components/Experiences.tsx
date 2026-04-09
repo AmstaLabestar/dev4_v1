@@ -45,7 +45,7 @@ const Experiences = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   viewport={{ once: true, amount: 0.25 }}
-                  className="rounded-[2rem] border border-white/12 bg-white/10 p-6 text-white shadow-[0_16px_40px_rgba(0,0,0,0.22)] backdrop-blur"
+                  className="rounded-[2rem] border border-white/12 bg-[rgba(28,36,48,0.96)] p-6 text-white shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="text-xl font-semibold text-white">{experience.title}</h3>

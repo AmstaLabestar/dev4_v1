@@ -113,9 +113,8 @@
 
   .surface-panel {
     border: 1px solid rgba(23, 37, 84, 0.08);
-    background: rgba(255, 252, 245, 0.84);
+    background: rgba(255, 252, 245, 0.96);
     box-shadow: 0 18px 60px rgba(29, 40, 53, 0.08);
-    backdrop-filter: blur(14px);
   }
 
   .section-shell {
