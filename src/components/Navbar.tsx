@@ -12,11 +12,11 @@ const links = [
 const Navbar = () => {
   return (
     <header className="sticky top-4 z-50">
-      <div className="navbar rounded-full border border-base-300 bg-base-100/90 px-4 shadow-sm backdrop-blur md:px-6">
+      <div className="navbar surface-panel rounded-full px-4 md:px-6">
         <a href="#home" className="flex items-center gap-3">
           <img src={logo} alt="Logo Dev4" className="h-11 w-11 rounded-full object-cover" />
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-base-content/50">Portfolio</p>
+            <p className="text-[11px] uppercase tracking-[0.35em] text-base-content/45">Portfolio</p>
             <p className="text-sm font-semibold text-base-content">Hamza Bikienga</p>
           </div>
         </a>
@@ -35,32 +35,22 @@ const Navbar = () => {
             href="/CV_Hamza_BIKIENGA.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary ml-2 rounded-full px-5 text-sm text-white"
+            className="btn btn-primary ml-2 rounded-full border-0 px-5 text-sm text-white shadow-none"
           >
             CV
           </a>
         </nav>
 
-        <div className="dropdown dropdown-end lg:hidden">
-          <button tabIndex={0} className="btn btn-ghost btn-circle" aria-label="Ouvrir le menu">
-            <Menu className="h-5 w-5" />
-          </button>
-          <ul
-            tabIndex={0}
-            className="menu dropdown-content mt-3 w-60 rounded-3xl border border-base-300 bg-base-100 p-3 shadow-xl"
-          >
-            {links.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-            <li className="mt-2">
-              <a href="/CV_Hamza_BIKIENGA.pdf" target="_blank" rel="noopener noreferrer">
-                Voir le CV
-              </a>
-            </li>
-          </ul>
-        </div>
+        <a
+          href="/CV_Hamza_BIKIENGA.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-ghost ml-auto rounded-full px-4 text-sm lg:hidden"
+          aria-label="Voir le CV"
+        >
+          <Menu className="h-5 w-5" />
+          CV
+        </a>
       </div>
     </header>
   );

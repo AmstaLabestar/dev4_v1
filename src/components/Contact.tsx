@@ -19,11 +19,12 @@ const contactLinks = [
 const Contact = () => {
   return (
     <section id="contact" className="py-16 md:py-24">
-      <div className="rounded-[2rem] border border-base-300 bg-base-100 p-6 md:p-10">
+      <div className="section-shell rounded-[2.25rem] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-6 md:p-10">
         <SectionHeading
           eyebrow="Contact"
           title="Disponible pour discuter d'un produit, d'une mission ou d'une refonte"
           description="Le site doit se terminer sur un appel a l'action simple et direct. Si le visiteur est convaincu, il doit savoir tout de suite comment me contacter."
+          invert
         />
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -36,7 +37,7 @@ const Contact = () => {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-3 rounded-[1.5rem] border border-base-300 px-5 py-4 text-sm font-semibold text-base-content transition hover:border-primary hover:text-primary"
+                className="flex items-center gap-3 rounded-[1.5rem] border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold text-white transition hover:border-secondary hover:text-secondary"
               >
                 <Icon className="h-5 w-5" />
                 {link.label}

@@ -2,16 +2,25 @@ type SectionHeadingProps = {
   eyebrow: string;
   title: string;
   description: string;
+  invert?: boolean;
 };
 
-const SectionHeading = ({ eyebrow, title, description }: SectionHeadingProps) => {
+const SectionHeading = ({ eyebrow, title, description, invert = false }: SectionHeadingProps) => {
   return (
-    <div className="mx-auto mb-10 max-w-2xl text-center md:mb-14">
-      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+    <div className="mx-auto mb-10 max-w-3xl text-center md:mb-14">
+      <p className={`eyebrow justify-center ${invert ? "text-secondary" : ""}`}>
         {eyebrow}
       </p>
-      <h2 className="text-3xl font-bold text-base-content md:text-5xl">{title}</h2>
-      <p className="mt-4 text-sm leading-7 text-base-content/70 md:text-base">{description}</p>
+      <h2 className={`mt-4 text-3xl font-bold md:text-5xl ${invert ? "text-white" : "text-base-content"}`}>
+        {title}
+      </h2>
+      <p
+        className={`mt-5 text-sm leading-7 md:text-base md:leading-8 ${
+          invert ? "text-white/72" : "text-base-content/70"
+        }`}
+      >
+        {description}
+      </p>
     </div>
   );
 };
