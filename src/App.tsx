@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Contact from "./components/Contact";
 import Experiences from "./components/Experiences";
 import Expertise from "./components/Expertise";
@@ -7,7 +8,29 @@ import MobileDock from "./components/MobileDock";
 import Navbar from "./components/Navbar";
 import Projets from "./components/Projets";
 
+type ThemeMode = "light" | "dark";
+
+const getInitialTheme = (): ThemeMode => {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  const storedTheme = window.localStorage.getItem("portfolio-theme");
+  if (storedTheme === "light" || storedTheme === "dark") {
+    return storedTheme;
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
+
 const App = () => {
+  const [theme, setTheme] = useState<ThemeMode>(getInitialTheme);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem("portfolio-theme", theme);
+  }, [theme]);
+
   return (
     <div className="app-shell min-h-screen bg-transparent">
       <a
@@ -17,7 +40,7 @@ const App = () => {
         Aller au contenu
       </a>
       <div className="mx-auto max-w-7xl px-4 pb-28 pt-4 md:px-6 lg:px-8 lg:pb-12">
-        <Navbar />
+        <Navbar theme={theme} onToggleTheme={() => setTheme(theme === "light" ? "dark" : "light")} />
         <main id="content">
           <Home />
           <Experiences />
@@ -27,7 +50,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
-      <MobileDock />
+      <MobileDock theme={theme} onToggleTheme={() => setTheme(theme === "light" ? "dark" : "light")} />
     </div>
   );
 };

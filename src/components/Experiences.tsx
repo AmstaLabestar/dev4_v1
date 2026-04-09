@@ -23,14 +23,14 @@ const Experiences = () => {
                 className="surface-panel rounded-[2rem] p-6"
               >
                 <h3 className="text-xl font-semibold text-base-content">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-700">{item.description}</p>
+                <p className="mt-3 text-sm leading-7 text-base-content/75">{item.description}</p>
               </motion.article>
             ))}
           </div>
         </div>
 
         <div>
-          <div className="section-shell rounded-[2.25rem] border border-slate-800 bg-slate-950 px-5 py-8 md:px-8 md:py-10">
+          <div className="section-shell rounded-[2.25rem] border border-sky-300/25 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 px-5 py-8 md:px-8 md:py-10">
             <SectionHeading
               eyebrow="Experience"
               title="Ce que j'ai deja pris en charge"
@@ -45,11 +45,11 @@ const Experiences = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   viewport={{ once: true, amount: 0.25 }}
-                  className="rounded-[2rem] border border-white/12 bg-[rgba(28,36,48,0.96)] p-6 text-white shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
+                  className="rounded-[2rem] border border-sky-200/10 bg-[rgba(15,23,42,0.94)] p-6 text-white shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="text-xl font-semibold text-white">{experience.title}</h3>
-                    <span className="rounded-full border border-white/10 bg-white px-3 py-1 text-xs font-semibold text-slate-900">
+                    <span className="rounded-full border border-sky-200/20 bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-950">
                       {experience.period}
                     </span>
                   </div>
@@ -57,7 +57,7 @@ const Experiences = () => {
                   <ul className="mt-5 space-y-3 text-sm leading-7 text-white/90">
                     {experience.points.map((point) => (
                       <li key={point} className="flex gap-3">
-                        <span className="mt-2 h-2 w-2 rounded-full bg-[#f7c58a]" />
+                        <span className="mt-2 h-2 w-2 rounded-full bg-sky-300" />
                         <span>{point}</span>
                       </li>
                     ))}

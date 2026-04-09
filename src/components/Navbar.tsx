@@ -1,5 +1,5 @@
-import { Menu } from "lucide-react";
 import logo from "../assets/logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#home", label: "Accueil" },
@@ -9,7 +9,12 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
-const Navbar = () => {
+type NavbarProps = {
+  theme: "light" | "dark";
+  onToggleTheme: () => void;
+};
+
+const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
   return (
     <header className="sticky top-4 z-50">
       <div className="navbar surface-panel rounded-full px-4 md:px-6">
@@ -39,18 +44,21 @@ const Navbar = () => {
           >
             CV
           </a>
+          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
         </nav>
 
-        <a
-          href="/CV_Hamza_BIKIENGA.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-ghost ml-auto rounded-full px-4 text-sm lg:hidden"
-          aria-label="Voir le CV"
-        >
-          <Menu className="h-5 w-5" />
-          CV
-        </a>
+        <div className="ml-auto flex items-center gap-2 lg:hidden">
+          <a
+            href="/CV_Hamza_BIKIENGA.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost rounded-full px-4 text-sm"
+            aria-label="Voir le CV"
+          >
+            CV
+          </a>
+          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+        </div>
       </div>
     </header>
   );

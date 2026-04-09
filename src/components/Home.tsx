@@ -19,10 +19,10 @@ const Home = () => {
           <span className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
             Developpeur full-stack & mobile
           </span>
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-slate-950 md:text-6xl">
-            Je conçois des applications rapides, utiles et prêtes pour la production.
+          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-base-content md:text-6xl">
+            Je concois des applications rapides, utiles et pretes pour la production.
           </h1>
-          <p className="max-w-2xl text-base leading-8 text-slate-800 md:text-lg">
+          <p className="max-w-2xl text-base leading-8 text-base-content/80 md:text-lg">
             J&apos;aide des clients et des equipes a transformer une idee en produit deploye:
             interface, backend, dockerisation, CI/CD, configuration Nginx, DNS et mise en
             ligne sur VPS.
@@ -48,7 +48,7 @@ const Home = () => {
             href="/CV_Hamza_BIKIENGA.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn h-12 rounded-full border border-slate-900/10 bg-transparent px-6 text-sm font-semibold text-base-content shadow-none"
+            className="btn h-12 rounded-full border border-base-300 bg-transparent px-6 text-sm font-semibold text-base-content shadow-none"
           >
             <Download className="h-4 w-4" />
             Voir le CV
@@ -58,8 +58,8 @@ const Home = () => {
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {stats.map((item) => (
             <div key={item.label} className="surface-panel rounded-[1.75rem] p-5">
-              <p className="text-3xl font-bold text-slate-950">{item.value}</p>
-              <p className="mt-2 text-sm leading-6 text-slate-700">{item.label}</p>
+              <p className="text-3xl font-bold text-base-content">{item.value}</p>
+              <p className="mt-2 text-sm leading-6 text-base-content/75">{item.label}</p>
             </div>
           ))}
         </div>
@@ -72,7 +72,7 @@ const Home = () => {
         className="mx-auto w-full max-w-md"
       >
         <div className="surface-panel relative overflow-hidden rounded-[2rem] p-3">
-          <div className="absolute right-5 top-5 rounded-full bg-slate-950 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white">
+          <div className="absolute right-5 top-5 rounded-full bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white">
             production
           </div>
           <img
@@ -83,9 +83,9 @@ const Home = () => {
             decoding="async"
             fetchPriority="high"
           />
-          <div className="absolute bottom-7 left-7 rounded-[1.5rem] bg-white px-4 py-3 shadow-lg">
-            <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Focus</p>
-            <p className="mt-1 text-sm font-semibold text-slate-900">
+          <div className="absolute bottom-7 left-7 rounded-[1.5rem] bg-base-100 px-4 py-3 shadow-lg">
+            <p className="text-xs uppercase tracking-[0.28em] text-base-content/55">Focus</p>
+            <p className="mt-1 text-sm font-semibold text-base-content">
               UI/UX mobile-first, delivery et deploiement
             </p>
           </div>

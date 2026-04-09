@@ -23,18 +23,18 @@ const Projets = () => {
             className="surface-panel rounded-[2rem] p-6"
           >
             <div className="flex items-center justify-between gap-4">
-              <span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+              <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
                 {project.category}
               </span>
             </div>
-            <h3 className="mt-5 text-2xl font-semibold text-slate-950">{project.title}</h3>
-            <p className="mt-4 text-sm leading-7 text-slate-700">{project.summary}</p>
+            <h3 className="mt-5 text-2xl font-semibold text-base-content">{project.title}</h3>
+            <p className="mt-4 text-sm leading-7 text-base-content/75">{project.summary}</p>
 
             <div className="mt-6 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-slate-900/10 bg-white/70 px-3 py-2 text-xs font-medium text-slate-700"
+                  className="rounded-full border border-base-300 bg-base-100/80 px-3 py-2 text-xs font-medium text-base-content/75"
                 >
                   {tag}
                 </span>
@@ -48,7 +48,7 @@ const Projets = () => {
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-primary hover:text-primary"
+                  className="inline-flex items-center gap-2 rounded-full border border-base-300 bg-base-100/80 px-4 py-2 text-sm font-semibold text-base-content transition hover:border-primary hover:text-primary"
                 >
                   {link.label}
                   <ArrowUpRight className="h-4 w-4" />
