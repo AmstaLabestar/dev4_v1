@@ -1,32 +1,27 @@
-
-import Experiences from "./components/Experiences"
-import Footer from "./components/Footer"
-import Home from "./components/Home"
-import Navbar from "./components/Navbar"
-import Projets from "./components/Projets"
-
-
+import Contact from "./components/Contact";
+import Experiences from "./components/Experiences";
+import Expertise from "./components/Expertise";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Projets from "./components/Projets";
 
 const App = () => {
   return (
-    
-      <div className="p-5 md:px-[15%]">
-        <Navbar/>
-        <Home/>
-      
-        <Experiences />
-        <Projets />
+    <div className="min-h-screen bg-base-200">
+      <div className="mx-auto max-w-7xl px-4 pb-10 pt-4 md:px-6 lg:px-8">
+        <Navbar />
+        <main>
+          <Home />
+          <Experiences />
+          <Projets />
+          <Expertise />
+          <Contact />
+        </main>
         <Footer />
-        <a
-  href="#"
-  className="fixed bottom-6 right-6 z-50 btn btn-primary btn-circle text-white shadow-lg hover:scale-110 transition"
-  aria-label="Retour en haut"
->
-  ↑
-</a>
-
       </div>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;

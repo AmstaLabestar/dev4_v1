@@ -1,64 +1,87 @@
-
 import { motion } from "framer-motion";
-// import your image file below, for example:
+import { ArrowRight, Download, Mail } from "lucide-react";
 import dev4Img from "../assets/Hamza.jpg";
-import { Mail } from "lucide-react";
+import { stats } from "../data/portfolio";
 
 const Home = () => {
   return (
-    <div id="home" className="flex flex-col-reverse md:flex-row justify-center items-center md:my-32 my-10">
-      
-      <motion.div 
-        className='flex flex-col'
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
+    <section
+      id="home"
+      className="grid gap-10 pb-16 pt-10 md:min-h-[80vh] md:grid-cols-[1.2fr_0.8fr] md:items-center md:gap-16 md:pb-24 md:pt-16"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="space-y-8"
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-center md:text-left mt-4 md:mt-0">
-          bonjour, <br /> je suis 
-          <span className="text-primary"> Dev4</span>
-        </h1>
-        <p className="my-4 text-md text-center md:text-left">
-          étudiant en génie logiciel passionné par le développement web et l’IA.<br />
-      Je conçois des solutions modernes avec React, Django, et Node.js,<br /> et je m’intéresse à l’automatisation, l’analyse de données et l’accessibilité.
-        </p>
-        <a className="btn btn-primary hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out md:w-fit">
-          <Mail className='w-5 h-5 mr-2' />
-          Contactez-moi 
-        </a>
-<a
-  href="/CV_Hamza_BIKIENGA.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn btn-outline btn-primary mt-3 md:w-fit hover:scale-105 transition"
->
-  📄 Voir mon CV
-</a>
+        <div className="space-y-4">
+          <span className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+            Developpeur full-stack & mobile
+          </span>
+          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-base-content md:text-6xl">
+            Je conçois des applications rapides, utiles et prêtes pour la production.
+          </h1>
+          <p className="max-w-2xl text-base leading-8 text-base-content/75 md:text-lg">
+            J&apos;aide des clients et des equipes a transformer une idee en produit deploye:
+            interface, backend, dockerisation, CI/CD, configuration Nginx, DNS et mise en
+            ligne sur VPS.
+          </p>
+        </div>
 
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <a
+            href="#contact"
+            className="btn btn-primary h-12 rounded-full px-6 text-sm font-semibold text-white"
+          >
+            <Mail className="h-4 w-4" />
+            Demarrer une discussion
+          </a>
+          <a
+            href="#projets"
+            className="btn h-12 rounded-full border border-base-300 bg-base-100 px-6 text-sm font-semibold text-base-content shadow-none"
+          >
+            Voir les projets
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href="/CV_Hamza_BIKIENGA.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn h-12 rounded-full border border-base-300 bg-transparent px-6 text-sm font-semibold text-base-content shadow-none"
+          >
+            <Download className="h-4 w-4" />
+            Voir le CV
+          </a>
+        </div>
 
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {stats.map((item) => (
+            <div key={item.label} className="rounded-3xl border border-base-300 bg-base-100 p-5">
+              <p className="text-3xl font-bold text-base-content">{item.value}</p>
+              <p className="mt-2 text-sm leading-6 text-base-content/65">{item.label}</p>
+            </div>
+          ))}
+        </div>
       </motion.div>
 
       <motion.div
-        className="md:ml-10 mt-10 md:mt-0"
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="mx-auto w-full max-w-md"
       >
-        <img
-          src={dev4Img}
-          alt="dev4"
-          className='w-72 md:w-96 object-cover border-8 border-primary shadow-xl'
-          style={{
-            borderRadius: '0px 200px 200px 0px',
-          }}
-        />
+        <div className="overflow-hidden rounded-[2rem] border border-base-300 bg-base-100 p-3 shadow-xl">
+          <img
+            src={dev4Img}
+            alt="Portrait de Hamza"
+            className="h-[420px] w-full rounded-[1.5rem] object-cover"
+            loading="eager"
+          />
+        </div>
       </motion.div>
-
-    </div>
-  )
-}
+    </section>
+  );
+};
 
 export default Home;
-
-
-

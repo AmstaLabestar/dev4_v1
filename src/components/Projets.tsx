@@ -1,117 +1,62 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
-import enaissanceImg from "../assets/images/enaissance.png";
-import tookosImg from "../assets/images/tookos.png";
-import todoImg from "../assets/images/todo.png";
-
-
-const allProjects = [
-  {
-    title: "eNaissance",
-    image: enaissanceImg,
-    demo: "https://demo-enaissance.example.com",
-    github: "https://github.com/AmstaLabestar/E-naissance.git",
-    category: "Web",
-  },
-  {
-    title: "E-commerce",
-    image: tookosImg,
-    demo: "https://demo-ecommerce.example.com",
-    github: "https://github.com/AmstaLabestar/tookos.git",
-    category: "Web",
-  },
-  {
-    title: "TodoList",
-    image: todoImg,
-    demo: "https://demo-todolist.example.com",
-    github: "https://github.com/AmstaLabestar/todoWithComponents.git",
-    category: "Web",
-  },
-];
-
-const categories = ["Tous", "Web", "Mobile", "IA"];
+import { ArrowUpRight } from "lucide-react";
+import { projects } from "../data/portfolio";
+import SectionHeading from "./SectionHeading";
 
 const Projets = () => {
-  const [activeCategory, setActiveCategory] = useState("Tous");
-
-  const filteredProjects =
-    activeCategory === "Tous"
-      ? allProjects
-      : allProjects.filter((p) => p.category === activeCategory);
-
   return (
-    <section className="py-20 bg-base-100" id="projets">
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-8"
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Mes <span className="text-primary">Projets</span>
-        </motion.h2>
+    <section id="projets" className="py-16 md:py-24">
+      <SectionHeading
+        eyebrow="Projets"
+        title="Une selection de projets qui met en avant la livraison"
+        description="La selection doit montrer plusieurs contextes de travail: entreprise, mobile, freelance et projet personnel. Le plus important est le role joue et la capacite a amener le produit jusqu'en production."
+      />
 
-        {/* Filtres */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`btn btn-sm ${
-                activeCategory === cat ? "btn-primary text-white" : "btn-ghost"
-              } transition duration-300`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+      <div className="grid gap-6 xl:grid-cols-2">
+        {projects.map((project, index) => (
+          <motion.article
+            key={project.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            viewport={{ once: true, amount: 0.25 }}
+            className="rounded-[2rem] border border-base-300 bg-base-100 p-6"
+          >
+            <div className="flex items-center justify-between gap-4">
+              <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                {project.category}
+              </span>
+            </div>
+            <h3 className="mt-5 text-2xl font-semibold text-base-content">{project.title}</h3>
+            <p className="mt-4 text-sm leading-7 text-base-content/70">{project.summary}</p>
 
-        {/* Liste des projets */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {filteredProjects.map((project, i) => (
-            <motion.div
-              key={i}
-              className="card shadow-xl border border-base-300 overflow-hidden hover:shadow-2xl transition duration-300 hover:scale-[1.03]"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <figure className="h-48 md:h-56 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover hover:scale-110 transition duration-500"
-                  loading="lazy"
-                />
-              </figure>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-base-300 px-3 py-2 text-xs font-medium text-base-content/70"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
 
-              <div className="card-body bg-base-100">
-                <h4 className="card-title text-xl">{project.title}</h4>
-                <div className="flex justify-between mt-4">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-sm btn-primary text-white hover:scale-105 transition"
-                  >
-                    Demo
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-sm btn-ghost text-xl hover:text-gray-600 transition"
-                  >
-                    <FaGithub />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {project.links.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="inline-flex items-center gap-2 rounded-full border border-base-300 px-4 py-2 text-sm font-semibold text-base-content transition hover:border-primary hover:text-primary"
+                >
+                  {link.label}
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </motion.article>
+        ))}
       </div>
     </section>
   );
