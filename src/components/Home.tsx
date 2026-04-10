@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, FileText, Mail } from "lucide-react";
-import dev4Img from "../assets/Hamza.jpg";
+import dev4Img from "../assets/profil.png";
 import { stats } from "../data/portfolio";
 
 const Home = () => {
