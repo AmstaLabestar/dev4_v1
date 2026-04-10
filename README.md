@@ -47,7 +47,23 @@ Le projet est configuré pour être déployé sur GitHub Pages avec la base :
 /dev4_v1/
 ```
 
-Commande de déploiement :
+### Déploiement automatique
+
+Un workflow GitHub Actions est présent dans :
+
+```bash
+.github/workflows/deploy.yml
+```
+
+À chaque `push` sur `main`, GitHub Actions :
+
+1. installe les dépendances
+2. build le projet
+3. publie automatiquement `dist` sur GitHub Pages
+
+### Déploiement manuel
+
+Commande disponible si tu veux republier à la main :
 
 ```bash
 npm run deploy
@@ -60,9 +76,7 @@ Cette commande publie le contenu de `dist` sur la branche `gh-pages`.
 Dans le dépôt GitHub :
 
 1. Ouvrir `Settings > Pages`
-2. Choisir `Deploy from a branch`
-3. Sélectionner la branche `gh-pages`
-4. Choisir le dossier `/ (root)`
+2. Choisir `GitHub Actions` comme source
 
 ## Fichiers importants
 
