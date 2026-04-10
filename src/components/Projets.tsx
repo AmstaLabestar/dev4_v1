@@ -8,8 +8,8 @@ const Projets = () => {
     <section id="projets" className="py-16 md:py-24">
       <SectionHeading
         eyebrow="Projets"
-        title="Des projets qui prouvent ma capacite a livrer dans des contextes varies"
-        description="Chaque fiche montre un besoin concret, la solution mise en place et la valeur que j'apporte quand il faut concevoir, executer puis livrer proprement."
+        title="Des projets qui prouvent ma capacité à livrer dans des contextes variés"
+        description="Chaque fiche résume le contexte, la réponse apportée et la valeur que j’ajoute quand il faut concevoir, exécuter puis livrer proprement."
       />
 
       <div className="grid gap-6 xl:grid-cols-2">
@@ -30,20 +30,20 @@ const Projets = () => {
 
             <h3 className="mt-5 text-2xl font-semibold text-base-content">{project.title}</h3>
 
-            <div className="mt-6 space-y-4">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Probleme</p>
-                <p className="mt-2 text-sm leading-7 text-base-content/75">{project.problem}</p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3 md:gap-5">
+              <div className="rounded-[1.25rem] bg-base-100/55 p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Problème</p>
+                <p className="mt-2 text-sm leading-6 text-base-content/75 md:leading-7">{project.problem}</p>
               </div>
 
-              <div>
+              <div className="rounded-[1.25rem] bg-base-100/55 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Solution</p>
-                <p className="mt-2 text-sm leading-7 text-base-content/75">{project.solution}</p>
+                <p className="mt-2 text-sm leading-6 text-base-content/75 md:leading-7">{project.solution}</p>
               </div>
 
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Valeur apportee</p>
-                <p className="mt-2 text-sm leading-7 text-base-content/85">{project.value}</p>
+              <div className="rounded-[1.25rem] border border-primary/10 bg-primary/5 p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Valeur apportée</p>
+                <p className="mt-2 text-sm leading-6 text-base-content/85 md:leading-7">{project.value}</p>
               </div>
             </div>
 

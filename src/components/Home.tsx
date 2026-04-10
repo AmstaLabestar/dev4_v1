@@ -17,14 +17,14 @@ const Home = () => {
       >
         <div className="space-y-4">
           <span className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-            Developpeur full-stack & mobile
+            Développeur full-stack & mobile
           </span>
           <h1 className="max-w-3xl text-4xl font-bold leading-tight text-base-content md:text-6xl">
-            Je t'aide a transformer une idee en produit fiable, moderne et pret pour la production.
+            Je t’aide à transformer une idée en produit fiable, moderne et prêt pour la production.
           </h1>
           <p className="max-w-2xl text-base leading-8 text-base-content/80 md:text-lg">
-            J'apporte plus que du code: une execution solide, une vraie attention a l'experience
-            utilisateur, et la capacite de livrer jusqu'au deploiement avec Docker, CI/CD,
+            J’apporte plus que du code : une exécution solide, une vraie attention à l’expérience
+            utilisateur, et la capacité de livrer jusqu’au déploiement avec Docker, CI/CD,
             Nginx, DNS et VPS.
           </p>
         </div>
@@ -35,7 +35,7 @@ const Home = () => {
             className="btn btn-primary h-12 rounded-full border-0 px-6 text-sm font-semibold text-white shadow-none"
           >
             <Mail className="h-4 w-4" />
-            Demarrer une discussion
+            Démarrer une discussion
           </a>
           <a
             href="#projets"
@@ -86,7 +86,7 @@ const Home = () => {
           <div className="absolute bottom-7 left-7 rounded-[1.5rem] bg-base-100 px-4 py-3 shadow-lg">
             <p className="text-xs uppercase tracking-[0.28em] text-base-content/55">Focus</p>
             <p className="mt-1 text-sm font-semibold text-base-content">
-              Experience utilisateur, execution technique et mise en production
+              Expérience utilisateur, exécution technique et mise en production
             </p>
           </div>
         </div>
