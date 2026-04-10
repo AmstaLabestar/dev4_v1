@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+# Portfolio Dev4
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personnel de Hamza Bikienga, développé avec React, TypeScript, Vite et Tailwind CSS.
 
-Currently, two official plugins are available:
+Le site met en avant :
+- des projets web et mobiles
+- des réalisations en contexte entreprise
+- des compétences orientées produit, delivery et mise en production
+- un mode clair/sombre avec identité visuelle bleu ciel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- DaisyUI
+- Framer Motion
+- Lucide React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Lancer le projet en local
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build de production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+Le build est généré dans le dossier `dist`.
+
+## Prévisualiser le build
+
+```bash
+npm run preview
+```
+
+## Déploiement
+
+Le projet est configuré pour être déployé sur GitHub Pages avec la base :
+
+```ts
+/dev4_v1/
+```
+
+Commande de déploiement :
+
+```bash
+npm run deploy
+```
+
+Cette commande publie le contenu de `dist` sur la branche `gh-pages`.
+
+## Configuration GitHub Pages
+
+Dans le dépôt GitHub :
+
+1. Ouvrir `Settings > Pages`
+2. Choisir `Deploy from a branch`
+3. Sélectionner la branche `gh-pages`
+4. Choisir le dossier `/ (root)`
+
+## Fichiers importants
+
+- `src/data/portfolio.ts` : contenu principal du portfolio
+- `src/components/` : sections UI
+- `public/CV_Hamza_BIKIENGA.pdf` : CV affiché dans le viewer
+- `public/cv-viewer.html` : page de visualisation du CV
+- `vite.config.ts` : configuration Vite et base GitHub Pages
+
+## Notes
+
+- Le CV est visible via un viewer intégré, sans lien de téléchargement direct depuis l’interface.
+- Le thème principal utilise une palette bleu ciel avec support du mode sombre.
