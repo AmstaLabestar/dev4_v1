@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
 import Contact from "./components/Contact";
 import Experiences from "./components/Experiences";
 import Expertise from "./components/Expertise";
@@ -50,6 +51,13 @@ const App = () => {
         </main>
         <Footer />
       </div>
+      <a
+        href="#home"
+        className="desktop-scrolltop surface-panel fixed bottom-6 right-6 z-40 hidden h-12 w-12 items-center justify-center rounded-full text-base-content transition hover:-translate-y-1 hover:text-primary lg:inline-flex"
+        aria-label="Remonter en haut"
+      >
+        <ArrowUp className="h-5 w-5" />
+      </a>
       <MobileDock theme={theme} onToggleTheme={() => setTheme(theme === "light" ? "dark" : "light")} />
     </div>
   );

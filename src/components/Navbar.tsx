@@ -20,10 +20,7 @@ const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
       <div className="navbar surface-panel rounded-full px-4 md:px-6">
         <a href="#home" className="flex items-center gap-3">
           <img src={logo} alt="Logo Dev4" className="h-11 w-11 rounded-full object-cover" />
-          <div>
-            <p className="text-[11px] uppercase tracking-[0.35em] text-base-content/45">Portfolio</p>
-            <p className="text-sm font-semibold text-base-content">Hamza Bikienga</p>
-          </div>
+          <p className="text-sm font-semibold text-base-content">Hamza Bikienga</p>
         </a>
 
         <nav className="ml-auto hidden items-center gap-2 lg:flex" aria-label="Navigation principale">
