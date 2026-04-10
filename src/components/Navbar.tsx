@@ -37,7 +37,7 @@ const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
             </a>
           ))}
           <a
-            href="/CV_Hamza_BIKIENGA.pdf"
+            href="cv-viewer.html"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary ml-2 rounded-full border-0 px-5 text-sm text-white shadow-none"
@@ -49,7 +49,7 @@ const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
 
         <div className="ml-auto flex items-center gap-2 lg:hidden">
           <a
-            href="/CV_Hamza_BIKIENGA.pdf"
+            href="cv-viewer.html"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-ghost rounded-full px-4 text-sm"

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Hamza Bikienga</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 28%),
+          linear-gradient(180deg, #eff8ff 0%, #f8fbff 100%);
+        color: #0f172a;
+      }
+
+      .shell {
+        width: min(1100px, calc(100% - 24px));
+        margin: 0 auto;
+        padding: 16px 0 24px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding: 14px 18px;
+        border: 1px solid rgba(125, 211, 252, 0.45);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: 0 14px 40px rgba(56, 189, 248, 0.14);
+      }
+
+      .title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        margin: 4px 0 0;
+        font-size: 0.9rem;
+        color: #475569;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #0c4a6e;
+        background: #e0f2fe;
+        font-weight: 600;
+      }
+
+      .viewer {
+        overflow: hidden;
+        border: 1px solid rgba(125, 211, 252, 0.45);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+      }
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 130px);
+        border: 0;
+      }
+
+      @media (max-width: 640px) {
+        .topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        iframe {
+          height: calc(100vh - 170px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <h1 class="title">CV de Hamza Bikienga</h1>
+          <p class="subtitle">Visualisation uniquement depuis le portfolio</p>
+        </div>
+        <a class="back-link" href="./">Retour au portfolio</a>
+      </section>
+
+      <section class="viewer" aria-label="Visualisation du CV">
+        <iframe src="./CV_Hamza_BIKIENGA.pdf#toolbar=0&navpanes=0&scrollbar=1" title="CV de Hamza Bikienga"></iframe>
+      </section>
+    </main>
+  </body>
+  </html>

@@ -8,8 +8,8 @@ const Projets = () => {
     <section id="projets" className="py-16 md:py-24">
       <SectionHeading
         eyebrow="Projets"
-        title="Une selection de projets qui met en avant la livraison"
-        description="La selection doit montrer plusieurs contextes de travail: entreprise, mobile, freelance et projet personnel. Le plus important est le role joue et la capacite a amener le produit jusqu'en production."
+        title="Des projets qui prouvent ma capacite a livrer dans des contextes varies"
+        description="Chaque fiche montre un besoin concret, la solution mise en place et la valeur que j'apporte quand il faut concevoir, executer puis livrer proprement."
       />
 
       <div className="grid gap-6 xl:grid-cols-2">
@@ -27,16 +27,33 @@ const Projets = () => {
                 {project.category}
               </span>
             </div>
+
             <h3 className="mt-5 text-2xl font-semibold text-base-content">{project.title}</h3>
-            <p className="mt-4 text-sm leading-7 text-base-content/75">{project.summary}</p>
+
+            <div className="mt-6 space-y-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Probleme</p>
+                <p className="mt-2 text-sm leading-7 text-base-content/75">{project.problem}</p>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Solution</p>
+                <p className="mt-2 text-sm leading-7 text-base-content/75">{project.solution}</p>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Valeur apportee</p>
+                <p className="mt-2 text-sm leading-7 text-base-content/85">{project.value}</p>
+              </div>
+            </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
+              {project.stack.map((item) => (
                 <span
-                  key={tag}
+                  key={item}
                   className="rounded-full border border-base-300 bg-base-100/80 px-3 py-2 text-xs font-medium text-base-content/75"
                 >
-                  {tag}
+                  {item}
                 </span>
               ))}
             </div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowRight, FileText, Mail } from "lucide-react";
 import dev4Img from "../assets/Hamza.jpg";
 import { stats } from "../data/portfolio";
 
@@ -20,12 +20,12 @@ const Home = () => {
             Developpeur full-stack & mobile
           </span>
           <h1 className="max-w-3xl text-4xl font-bold leading-tight text-base-content md:text-6xl">
-            Je concois des applications rapides, utiles et pretes pour la production.
+            Je t'aide a transformer une idee en produit fiable, moderne et pret pour la production.
           </h1>
           <p className="max-w-2xl text-base leading-8 text-base-content/80 md:text-lg">
-            J&apos;aide des clients et des equipes a transformer une idee en produit deploye:
-            interface, backend, dockerisation, CI/CD, configuration Nginx, DNS et mise en
-            ligne sur VPS.
+            J'apporte plus que du code: une execution solide, une vraie attention a l'experience
+            utilisateur, et la capacite de livrer jusqu'au deploiement avec Docker, CI/CD,
+            Nginx, DNS et VPS.
           </p>
         </div>
 
@@ -45,12 +45,12 @@ const Home = () => {
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="/CV_Hamza_BIKIENGA.pdf"
+            href="cv-viewer.html"
             target="_blank"
             rel="noopener noreferrer"
             className="btn h-12 rounded-full border border-base-300 bg-transparent px-6 text-sm font-semibold text-base-content shadow-none"
           >
-            <Download className="h-4 w-4" />
+            <FileText className="h-4 w-4" />
             Voir le CV
           </a>
         </div>
@@ -86,7 +86,7 @@ const Home = () => {
           <div className="absolute bottom-7 left-7 rounded-[1.5rem] bg-base-100 px-4 py-3 shadow-lg">
             <p className="text-xs uppercase tracking-[0.28em] text-base-content/55">Focus</p>
             <p className="mt-1 text-sm font-semibold text-base-content">
-              UI/UX mobile-first, delivery et deploiement
+              Experience utilisateur, execution technique et mise en production
             </p>
           </div>
         </div>

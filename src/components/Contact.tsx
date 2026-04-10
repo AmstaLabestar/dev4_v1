@@ -13,7 +13,7 @@ const contactLinks = [
     href: "https://www.linkedin.com/in/hamza-bikienga-7b3b152aa/",
     icon: Linkedin,
   },
-  { label: "Consulter le CV", href: "/CV_Hamza_BIKIENGA.pdf", icon: FileText },
+  { label: "Consulter le CV", href: "cv-viewer.html", icon: FileText },
 ];
 
 const Contact = () => {
@@ -22,8 +22,8 @@ const Contact = () => {
       <div className="section-shell rounded-[2.25rem] border border-sky-300/20 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 p-6 md:p-10">
         <SectionHeading
           eyebrow="Contact"
-          title="Disponible pour discuter d'un produit, d'une mission ou d'une refonte"
-          description="Le site doit se terminer sur un appel a l'action simple et direct. Si le visiteur est convaincu, il doit savoir tout de suite comment me contacter."
+          title="Besoin d'un developpeur capable de concevoir, livrer et deployer ?"
+          description="Si tu cherches quelqu'un capable de transformer un besoin en solution propre, rapide et exploitable, on peut en discuter."
           invert
         />
 

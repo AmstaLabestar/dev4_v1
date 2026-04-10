@@ -10,8 +10,8 @@ const Expertise = () => {
           <div>
             <SectionHeading
               eyebrow="Expertise"
-              title="Ce que j'apporte a un projet"
-              description="Le portfolio doit rendre visible a la fois la competence technique, la capacite de delivery et l'attention portee a l'experience utilisateur, surtout sur mobile."
+              title="Ce que j'apporte quand un projet doit vraiment avancer"
+              description="Ma valeur n'est pas seulement technique. J'apporte aussi de la clarte, de la vitesse d'execution et une vision orientee resultat."
             />
           </div>
 

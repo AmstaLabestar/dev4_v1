@@ -9,8 +9,8 @@ const Experiences = () => {
         <div>
           <SectionHeading
             eyebrow="Positionnement"
-            title="Un profil plus oriente execution que simple experimentation"
-            description="Le portfolio doit montrer que je sais concevoir, developper, livrer et deployer. Cette section pose les preuves les plus rapides a comprendre."
+            title="Un profil qui apporte de la valeur produit, technique et delivery"
+            description="Je ne viens pas seulement developper des ecrans. J'aide a faire avancer un produit avec une execution propre, une experience utilisateur convaincante et une livraison fiable."
           />
           <div className="grid gap-5 md:grid-cols-3">
             {highlights.map((item, index) => (
@@ -33,8 +33,8 @@ const Experiences = () => {
           <div className="section-shell rounded-[2.25rem] border border-sky-300/25 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 px-5 py-8 md:px-8 md:py-10">
             <SectionHeading
               eyebrow="Experience"
-              title="Ce que j'ai deja pris en charge"
-              description="Au lieu d'afficher seulement des logos de technologies, le portfolio doit presenter les vraies responsabilites deja gerees sur des missions concretes."
+              title="Ce que je peux prendre en charge concretement"
+              description="Mon experience montre surtout une chose: je peux intervenir sur les points qui font vraiment avancer un projet, de l'interface jusqu'a la production."
               invert
             />
             <div className="grid gap-6 md:grid-cols-2">
