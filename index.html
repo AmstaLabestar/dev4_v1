@@ -2,27 +2,94 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/png" href="./logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport-fit=cover : necessaire pour que env(safe-area-inset-*) soit renseigne sur iOS. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <title>Hamza Bikienga — Ingénieur logiciel Backend &amp; DevOps | Django, PostgreSQL, Docker</title>
     <meta
       name="description"
-      content="Portfolio de Hamza Bikienga, développeur full-stack et mobile. Applications web et mobiles, dockerisation, CI/CD, configuration Nginx, DNS et déploiement sur VPS."
+      content="Ingénieur logiciel orienté backend. Je conçois des applications Django / PostgreSQL et je les mène jusqu'à la production : Docker, CI/CD, déploiement VPS et supervision."
     />
+    <meta name="author" content="Hamza Bikienga" />
+    <link rel="canonical" href="https://amstalabestar.github.io/dev4_v1/" />
+
+    <!-- La couleur suit le thème réellement appliqué, mise à jour par useTheme. -->
+    <meta name="theme-color" content="#fbfcfd" />
+    <link rel="icon" type="image/png" sizes="128x128" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./favicon.png" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Hamza Bikienga" />
+    <meta property="og:url" content="https://amstalabestar.github.io/dev4_v1/" />
     <meta
-      name="keywords"
-      content="portfolio développeur, full-stack, mobile, React, Docker, CI/CD, Nginx, VPS"
+      property="og:title"
+      content="Hamza Bikienga — Ingénieur logiciel Backend &amp; DevOps"
     />
-    <meta name="theme-color" content="#0f766e" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hamza Bikienga | Developpeur full-stack & mobile" />
     <meta
       property="og:description"
-      content="Applications rapides, utiles et déployées en production avec une approche mobile-first."
+      content="Ingénieur logiciel orienté backend. Applications Django / PostgreSQL menées jusqu'à la production : Docker, CI/CD, déploiement et supervision."
     />
-    <meta property="og:image" content="./logo.png" />
+    <meta property="og:image" content="https://amstalabestar.github.io/dev4_v1/logo.png" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta
+      property="og:image:alt"
+      content="Portfolio de Hamza Bikienga, ingénieur logiciel backend et DevOps"
+    />
     <meta property="og:locale" content="fr_FR" />
-    <title>Hamza Bikienga </title>
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Hamza Bikienga — Ingénieur logiciel Backend &amp; DevOps"
+    />
+    <meta
+      name="twitter:description"
+      content="Ingénieur logiciel orienté backend. Applications Django / PostgreSQL menées jusqu'à la production."
+    />
+    <meta name="twitter:image" content="https://amstalabestar.github.io/dev4_v1/logo.png" />
+
+    <!--
+      Polices : preconnect explicite puis chargement non bloquant.
+      Remplace l'@import CSS de la version précédente, qui bloquait le rendu.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <!--
+      Fiche Person servie en HTML statique, donc lisible par les robots qui
+      n'exécutent pas JavaScript. Elle est ensuite mise à jour selon la langue.
+    -->
+    <script type="application/ld+json" id="json-ld-person">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hamza Bikienga",
+        "url": "https://amstalabestar.github.io/dev4_v1/",
+        "jobTitle": "Ingénieur logiciel — Backend & DevOps",
+        "email": "mailto:labestar04@gmail.com",
+        "sameAs": [
+          "https://github.com/AmstaLabestar",
+          "https://www.linkedin.com/in/hamza-bikienga-7b3b152aa/"
+        ],
+        "knowsAbout": [
+          "Python",
+          "Django",
+          "Django REST Framework",
+          "PostgreSQL",
+          "Redis",
+          "Celery",
+          "Docker",
+          "CI/CD",
+          "Linux"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
