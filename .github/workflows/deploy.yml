@@ -35,6 +35,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Un changement qui ne compile pas ou qui viole le lint ne doit jamais
+      # atteindre la production : ces deux etapes echouent avant le build.
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
       - name: Build project
         run: npm run build
 
